@@ -1,0 +1,136 @@
+/* FOB Google Maps Geocoding Plugin Styles */
+
+/* Google Places Autocomplete Dropdown */
+.pac-container {
+    z-index: 9999 !important;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    border: 1px solid #e1e5e9;
+    margin-top: 2px;
+    font-family: inherit;
+}
+
+.pac-item {
+    padding: 10px 14px;
+    border-bottom: 1px solid #f1f3f4;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.pac-item:last-child {
+    border-bottom: none;
+}
+
+.pac-item:hover {
+    background-color: #f8f9fa;
+}
+
+.pac-item-selected {
+    background-color: #e3f2fd;
+}
+
+.pac-matched {
+    font-weight: 600;
+    color: #1976d2;
+}
+
+.pac-icon {
+    margin-right: 8px;
+}
+
+/* Geocoding Button */
+.geocoding-button {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    color: white;
+}
+
+.geocoding-button:hover {
+    background-color: #138496 !important;
+    border-color: #117a8b !important;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.geocoding-button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.geocoding-button:disabled {
+    cursor: not-allowed !important;
+    opacity: 0.7;
+    transform: none !important;
+}
+
+.geocoding-button svg {
+    flex-shrink: 0;
+}
+
+/* Spinner Animation */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Location Field Enhancement */
+input[name="location"] {
+    position: relative;
+}
+
+/* Button Container */
+.geocoding-button-container {
+    margin-top: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .geocoding-button {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+    
+    .pac-item {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .pac-container {
+        background-color: #2d3748;
+        border-color: #4a5568;
+        color: #e2e8f0;
+    }
+    
+    .pac-item {
+        border-bottom-color: #4a5568;
+        color: #e2e8f0;
+    }
+    
+    .pac-item:hover {
+        background-color: #4a5568;
+    }
+    
+    .pac-item-selected {
+        background-color: #3182ce;
+    }
+    
+    .pac-matched {
+        color: #63b3ed;
+    }
+}
