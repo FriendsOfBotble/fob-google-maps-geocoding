@@ -5,7 +5,7 @@
     "provider": "FriendsOfBotble\\GoogleMapsGeocoding\\Providers\\GoogleMapsGeocodingServiceProvider",
     "author": "Friends Of Botble",
     "url": "https://friendsofbotble.com",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Automatically get latitude and longitude from Google Maps API when entering address in forms",
     "minimum_core_version": "7.5.0"
 }
