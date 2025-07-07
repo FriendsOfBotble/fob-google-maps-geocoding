@@ -5,10 +5,8 @@ use FriendsOfBotble\GoogleMapsGeocoding\Http\Controllers\Settings\GoogleMapsGeoc
 use Illuminate\Support\Facades\Route;
 
 AdminHelper::registerRoutes(function () {
-    Route::group(['namespace' => 'FriendsOfBotble\GoogleMapsGeocoding\Http\Controllers\Settings'], function () {
-        Route::group(['prefix' => 'settings/fob-google-maps-geocoding', 'as' => 'fob-google-maps-geocoding.'], function () {
-            Route::get('/', [GoogleMapsGeocodingSettingController::class, 'edit'])->name('settings');
-            Route::put('/', [GoogleMapsGeocodingSettingController::class, 'update'])->name('settings.update');
-        });
+    Route::group(['prefix' => 'settings/fob-google-maps-geocoding', 'as' => 'fob-google-maps-geocoding.'], function () {
+        Route::get('/', [GoogleMapsGeocodingSettingController::class, 'edit'])->name('settings');
+        Route::put('/', [GoogleMapsGeocodingSettingController::class, 'update'])->name('settings.update');
     });
 });

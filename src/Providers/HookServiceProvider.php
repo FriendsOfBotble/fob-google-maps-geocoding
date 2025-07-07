@@ -12,6 +12,7 @@ class HookServiceProvider extends ServiceProvider
         add_action(BASE_ACTION_META_BOXES, [$this, 'addGeocodingAssets'], 120);
         add_filter(BASE_FILTER_FOOTER_LAYOUT_TEMPLATE, [$this, 'addGeocodingScript'], 120);
         add_filter('real_estate_dashboard_header', [$this, 'addGeocodingScript'], 120);
+        add_filter('job_board_dashboard_header', [$this, 'addGeocodingScript'], 120);
     }
 
     public function addGeocodingAssets(): void
